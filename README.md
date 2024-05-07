@@ -1,3 +1,5 @@
+Gym app for me and the bros cuz we need to be more accountable
+
 Roadmap of stuff i am gonna add for the bros and me 😎
 
 - different exercises
