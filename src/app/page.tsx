@@ -1,4 +1,18 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,8 +23,34 @@ export default function Home() {
 
         <p>Log in to continue</p>
 
-        <div>
-          <Button>Login</Button>
+        <div className="flex flex-col gap-5">
+          <>
+            <AlertDialog>
+              <AlertDialogTrigger asChild>
+                <Button>Login</Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>
+                    This feature is temporarily down
+                  </AlertDialogTitle>
+                  <AlertDialogDescription>
+                    this feature is not up yet cuz i got busy, but it will get
+                    done....soon....i hope
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Go back</AlertDialogCancel>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </>
+
+          <>
+            <Link href="/workout">
+              <Button>Workouts</Button>
+            </Link>
+          </>
         </div>
       </main>
     </>
